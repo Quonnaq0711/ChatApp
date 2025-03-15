@@ -6,8 +6,8 @@ import AuthImagePattern  from '../Components/AuthImagePattern';
 
 
 const LoginPage = () => {
-  const { showPassword, setShowPassword } = useState(false);
-  const { formData, setFormData } = useState({
+  const [ showPassword, setShowPassword]  = useState(false);
+  const [ formData, setFormData]  = useState({
     email: '',
     password: '',
   });
@@ -15,7 +15,7 @@ const LoginPage = () => {
   const { login, isLoggingIn } = useAuthStore();
 
   const handleSubmit = async (e) => {
-    e.preventDefualt();
+    e.preventDefault();
     login(formData)
   }
   return (
