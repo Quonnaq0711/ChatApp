@@ -16,8 +16,9 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    login(formData)
+    login(formData);
   }
+
   return (
     <div className="h-screen grid lg:grid-cols-2">
     {/* Left Side - Form */}

@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(cors({
     origin: (origin, callback) => {
         // Allow both 'localhost' and '127.0.0.1' as origins
-        const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+        const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://localhost:5173', 'https://127.0.0.1:5173'];
 
         if (allowedOrigins.includes(origin) || !origin) { // !origin allows for non-browser requests (like Postman)
             callback(null, true);
